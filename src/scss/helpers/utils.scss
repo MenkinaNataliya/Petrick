@@ -1,0 +1,185 @@
+%vertical-center-wrapper {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  }
+}
+
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@function em($size, $base:16px) {
+  $remSize: $size / $base;
+  @return $remSize * 1em;
+}
+
+@mixin center($w, $h) {
+  position: absolute;
+  width: em($w);
+  height: em($h);
+  top: 50%;
+  left: 50%;
+  margin-top: em(-$h/2);
+  margin-left: em(-$w/2);
+}
+
+%fullsize {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+%justify {
+  text-align: justify;
+  text-justify: distribute;
+  line-height: 1;
+  margin-bottom: -1em;
+
+  & > * {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@mixin ifmobile {
+  @media only screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin ifdesktop {
+  @media only screen and (min-width: 961px) {
+    @content;
+  }
+}
+
+@mixin respondH($media) {
+  @media only screen and (min-height: $media) {
+    @content;
+  }
+}
+
+@mixin respond($media) {
+  @media only screen and (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin respondFrom($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}
+
+
+
+
+@mixin ifparent($selector) {
+  #{$selector} & {
+    @content;
+  }
+}
+
+@mixin ifbody($classname) {
+  @include ifparent('html#{$classname}') {
+    @content;
+  }
+}
+
+@mixin nobr() {
+  & br {
+    content: ' ';
+  }
+
+  & br:after {
+    content: ' ';
+  }
+}
+
+%noprint {
+  @media print {
+    & {
+      display: none;
+    }
+  }
+}
+
+%button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation, $count: infinite, $ease: ease) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-iteration-count: $count;
+  -webkit-animation-timing-function: $ease;
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-iteration-count: $count;
+  -moz-animation-timing-function: $ease;
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-iteration-count: $count;
+  animation-timing-function: $ease;
+}
+
+.is_no-transition {
+  transition: none !important;
+}
+
+nobr {
+  white-space: nowrap;
+}

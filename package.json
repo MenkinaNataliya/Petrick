@@ -1,0 +1,19 @@
+{
+  "name": "project.name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-autoprefixer": "*",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-inline-css": "*",
+    "grunt-sass": "*",
+    "grunt-svgmin": "3.3.0"
+  }
+}

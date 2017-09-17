@@ -1,0 +1,42 @@
+.employee{
+  text-align: center;
+  font-size: 0.8em;
+
+  &__name{
+
+    font-weight: 600;
+  }
+
+  &__position{
+    font-size: 0.9em;
+  }
+
+  &__photo{
+    height: 12em;
+    width: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &_1{
+      background-image: url(../images/team0.png);
+    }
+
+    &_2{
+      background-image: url(../images/team1.png);
+    }
+
+    &_3{
+      background-image: url(../images/team2.png);
+    }
+    &_4{
+      background-image: url(../images/team3.png);
+    }
+    &_5{
+      background-image: url(../images/team4.png);
+    }
+    &_6{
+      background-image: url(../images/team5.png);
+    }
+  }
+}

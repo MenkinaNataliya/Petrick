@@ -1,0 +1,29 @@
+.story-content{
+  &__image{
+    min-height: 10em;
+
+    background-image: url(../images/announce-1.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+
+
+    @include ifparent('.story__content_text-image'){
+      width:49.5%;
+    }
+
+  }
+
+  &__text{
+
+    display: inline-block;
+    text-align: left;
+    font-size: 0.9em;
+    @include ifparent('.story__content_text-image'){
+      width: 46.5%;
+      margin-left: 2em;
+
+    }
+  }
+}

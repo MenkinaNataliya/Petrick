@@ -1,0 +1,40 @@
+.story{
+  text-align: center;
+
+
+  &__button-prev{
+    transform: rotate(270deg);
+    float: left;
+    text-align: center;
+  }
+
+  &__button-next{
+    transform: rotate(90deg);
+    text-align: center;
+    float: right;
+  }
+
+
+  &__content{
+    &_text{
+      padding: 0 15em;
+      text-align: left;
+    }
+
+
+  }
+
+  &__type{
+    font-weight: 900;
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 1.2em;
+  }
+  
+  &__authors{
+    margin: 2em 0;
+  }
+
+}

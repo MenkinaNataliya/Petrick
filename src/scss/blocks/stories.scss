@@ -1,0 +1,29 @@
+.stories{
+
+  &__sort-button{
+    float: right;
+    color: gray;
+    font-size: 0.7em;
+    font-weight: 800;
+  }
+
+
+  &__announce{
+    display: inline-block;
+    margin: 0.2em auto;
+
+    &_medium{
+      width: 49.5%
+    }
+
+    &_small{
+      width: 33%;
+    }
+
+    &_big{
+      width: 66%;
+    }
+
+  }
+
+}

@@ -1,0 +1,39 @@
+.story-announce{
+
+  min-height: 12em;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+
+  &__type{
+    margin: 0 1em;
+    margin-top: 1em;
+    font-size: 0.8em;
+    font-weight: 800;
+  }
+
+  &__title{
+    font-size: 0.8em;
+    margin: 0 1em;
+  }
+
+  &_1{
+    background-image: url(../images/announce-1.png);
+  }
+  &_2{
+    background-image: url(../images/anounce-2.jpg);
+  }
+  &_3{
+    background-image: url(../images/anounce-3.jpg);
+  }
+  &_4{
+    background-image: url(../images/anounce-4.jpg);
+  }
+  &_5{
+    background-image: url(../images/anounce-5.jpg);
+  }
+  &_6{
+    background-image: url(../images/anounce-6.jpg);
+  }
+}

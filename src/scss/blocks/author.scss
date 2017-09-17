@@ -1,0 +1,19 @@
+.author{
+  margin: 1em 0;
+  &__post{
+    display: inline-block;
+    margin-right: 1em;
+    font-weight: bold;
+    width: 48%;
+    text-align: right;
+  }
+
+  &__name{
+    display: inline-block;
+
+
+    width: 49%;
+    text-align: left;
+
+  }
+}

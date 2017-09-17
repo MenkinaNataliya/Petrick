@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'stem';
+  src: url('../fonts/STM45__W.eot');
+  src: url('../fonts/STM45__W.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/STM45__W.woff2') format('woff2'),
+    url('../fonts/STM45__W.woff') format('woff'),
+    url('../fonts/STM45__W.ttf') format('truetype'),
+    url('../fonts/STM45__W.svg#StemWeb-Light') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'stem';
+  src: url('../fonts/STM55__W.eot');
+  src: url('../fonts/STM55__W.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/STM55__W.woff2') format('woff2'),
+    url('../fonts/STM55__W.woff') format('woff'),
+    url('../fonts/STM55__W.ttf') format('truetype'),
+    url('../fonts/STM55__W.svg#StemWeb-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'stem';
+  src: url('../fonts/STM65__W.eot');
+  src: url('../fonts/STM65__W.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/STM65__W.woff2') format('woff2'),
+    url('../fonts/STM65__W.woff') format('woff'),
+    url('../fonts/STM65__W.ttf') format('truetype'),
+    url('../fonts/STM65__W.svg#StemWeb-Medium') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'stem';
+  src: url('../fonts/STM75__W.eot');
+  src: url('../fonts/STM75__W.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/STM75__W.woff2') format('woff2'),
+    url('../fonts/STM75__W.woff') format('woff'),
+    url('../fonts/STM75__W.ttf') format('truetype'),
+    url('../fonts/STM75__W.svg#StemWeb-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+%stem {
+  font-family: 'stem', 'Open Sans', sans-serif;
+}
+%sans {
+  font-family: 'Open Sans', sans-serif;
+}

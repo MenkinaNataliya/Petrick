@@ -1,0 +1,29 @@
+.info{
+
+  background: lightgray;
+  display: none;
+  margin-bottom: 2em;
+
+
+  &_hidden{
+    display: none;
+  }
+
+  &_show{
+    display: block;
+  }
+
+  &__employee{
+    display: inline-block;
+    width: 16%;
+  }
+
+  &__about-wrapper{
+    margin: 2em 0;
+  }
+
+  &__about{
+    display: inline-block;
+    width: 48%;
+  }
+}

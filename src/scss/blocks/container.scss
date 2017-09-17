@@ -1,0 +1,29 @@
+.container {
+  margin: 0 auto;
+  max-width: 60em;
+
+  &_small{
+    max-width: 60em;
+  }
+
+  &_first {
+    font-size: (16/1920*100vw);
+    margin-top: -23em;
+    margin-bottom: 4.8em;
+
+    @include ifmobile{
+      margin-top: -46em;
+      .title{
+        font-size: 5em;
+      }
+    }
+  }
+
+  p{
+    font-size: 1.3em;
+    @include ifmobile{
+      margin: 0 1em;
+      font-size: 1.8em;
+    }
+  }
+}

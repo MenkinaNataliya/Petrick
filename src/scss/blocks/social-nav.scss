@@ -1,0 +1,18 @@
+.social-nav{
+
+  text-align: center;
+
+  &__item{
+    margin: 3em ;
+    font-weight: 900;
+    font-size: 0.8em;
+    display: inline-block;
+
+    &_blue{
+      color: blue;
+    }
+    &_aqua{
+      color: aqua;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+//Fonts
+$font-family: sans-serif;
+$line-height: 1.3;
+
+//Colors
+$font-color: #333333;
+$brand-color: #ffcd00;
+$additional-color: #005ea8;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+
+  @include respondFrom(1920px) {
+    font-size: (16/1920*100vw);
+  }
+  @include respond(850px) {
+    font-size: (16/850*100vw);
+  }
+}
+
+body {
+  font-family: $font-family;
+  line-height: $line-height;
+  color: $font-color;
+  position: relative;
+}
+
+::selection {
+  background: $brand-color;
+}
+
+.is_no-transition {
+  transition: none !important;
+}
+
+.is_active{
+  color: #004737;
+  border-bottom: 2px solid #004737;
+}

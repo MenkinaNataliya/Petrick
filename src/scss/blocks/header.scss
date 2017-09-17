@@ -1,0 +1,24 @@
+.header{
+  display: block;
+  min-height: 5em;
+
+  &_color{
+    background: lightgray;
+  }
+
+  &__logo{
+    display: inline-block;
+    margin-right: 4em;
+    transition: height 0.2s ease-in-out;
+  }
+
+  &__switch-button{
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.7em;
+    float: right;
+    font-size: 1.2em;
+    font-weight: 900;
+
+  }
+}

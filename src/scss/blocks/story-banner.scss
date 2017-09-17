@@ -1,0 +1,20 @@
+.story-banner{
+  margin: 1em auto;
+  &__image {
+    min-height: 20em;
+
+    background-image: url(../images/announce-1.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  &__text{
+    color: lightgray;
+    font-size: 0.8em;
+    text-align: right;
+    font-weight: bold;
+  }
+
+}
