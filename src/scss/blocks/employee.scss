@@ -1,18 +1,18 @@
 .employee{
   text-align: center;
-  font-size: 0.8em;
+
 
   &__name{
-
+    font-size: 0.75em;
     font-weight: 600;
   }
 
   &__position{
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
 
   &__photo{
-    height: 12em;
+    height: em(160px);
     width: auto;
     background-size: contain;
     background-position: center;

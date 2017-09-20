@@ -477,19 +477,28 @@ app.SwitchButton.prototype = {
 
     var $switchButton = $('.header__switch-button');
     var $info=$('.info');
-    var $header = $('.header');
+    var $headerLogo=$('.header__logo');
+    var $headerBtn=$('.header__switch-button');
+
     $switchButton.click(function(){
         $(this).html("info");
-        if( $info.hasClass('info_show'))$(this).html("info");
-        else $(this).html("story");
+        if( $info.hasClass('info_show')){
+            $(this).html("info");
+
+        }
+        else{
+
+
+            $(this).html("story");
+        }
+
         $info.toggleClass('info_show');
-        $header.toggleClass('header_color');
     });
 
     var $announce=$('.stories__announce');
-    $announce.click(function(){
+    /*$announce.click(function(){
         window.location="project.html"
-    })
+    })*/
 
 
 })();

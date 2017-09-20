@@ -2,17 +2,24 @@
   display: block;
 
   &__logo{
+    cursor: pointer;
     display: inline-block;
-    margin-right: 4em;
-    transition: height 0.2s ease-in-out;
+    margin-top: 0.7em;
+    margin-bottom: 1em;
+    float: left;
+    font-size: 0.8em;
+    font-weight: 900;
   }
 
   &__copyright{
+    cursor: pointer;
     display: inline-block;
     margin-top: 0.7em;
+    margin-bottom: 1em;
     float: right;
     font-size: 0.8em;
     font-weight: 900;
 
   }
+
 }

@@ -1,12 +1,16 @@
 .social-nav{
 
-  text-align: center;
+
+  display: flex;
+  padding: 1em;
+  justify-content: center;
 
   &__item{
-    margin: 3em ;
-    font-weight: 900;
+    margin: 1em;
+    padding: 0.5em;
     font-size: 0.8em;
-    display: inline-block;
+    font-weight: 900;
+
 
     &_blue{
       color: blue;
