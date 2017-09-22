@@ -1,10 +1,14 @@
 .story-announce{
-  position: relative;
-  min-height: 12em;
+
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
+
+  position:relative;
+  width: auto;
+  height: 100%;
+
 
   &__type{
     position: absolute;
@@ -21,7 +25,7 @@
   }
 
   &__black-effect{
-    opacity: 0.4;
+    opacity:0.3;
     background-color: #000000;
     position: absolute;
 

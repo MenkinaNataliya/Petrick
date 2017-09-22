@@ -1,29 +1,48 @@
 .stories{
 
   padding-top: 5em;
+  padding-bottom: 2em;
+
+
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -0.3em;
+  }
+
 
   &__sort-button{
-    float: right;
-    color: gray;
+    position: relative;
+    color: #808080;
     font-size: 0.7em;
     font-weight: 800;
+    text-align: right;
+
   }
 
 
   &__announce{
-    display: inline-block;
-    margin: 0.2em auto;
+    position: relative;
+    width: 100%;
+    min-height: 12em;
+    padding: 0.3em;
+
 
     &_medium{
-      width: 49.5%
+      flex: 0 0 50%;
+      max-width: 50%;
     }
 
     &_small{
-      width: 33%;
+      flex: 0 0 35%;
+      max-width: 35%;
     }
 
     &_big{
-      width: 66%;
+      flex: 0 0 65%;
+      max-width: 65%;
     }
 
   }

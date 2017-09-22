@@ -1,17 +1,17 @@
 .story{
   text-align: center;
-
+  padding-top: 6em;
 
   &__button-prev{
     transform: rotate(270deg);
-    float: left;
-    text-align: center;
+    left: 0;
+    top: 5em;
   }
 
   &__button-next{
     transform: rotate(90deg);
-    text-align: center;
-    float: right;
+    right: 0;
+    top: 5em;
   }
 
 

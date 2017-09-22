@@ -1,7 +1,8 @@
 .story-content{
+  vertical-align: middle;
   &__image{
     min-height: 10em;
-
+    vertical-align: middle;
     background-image: url(../images/announce-1.png);
     background-size: 100%;
     background-position: center;
@@ -16,7 +17,7 @@
   }
 
   &__text{
-
+    vertical-align: middle;
     display: inline-block;
     text-align: left;
     font-size: 0.9em;

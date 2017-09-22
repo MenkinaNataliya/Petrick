@@ -1,9 +1,8 @@
 .info{
-
-  background: lightgray;
+  background: 	#D3D3D3;
   display: none;
-  margin-bottom: 2em;
-  padding-top: 8em;
+  padding-top: 5em;
+  padding-bottom: 2em;
 
 
   &_hidden{
@@ -17,20 +16,22 @@
   &__employees{
     display: flex;
     padding: 1em;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__employee{
-    margin: 1em 1.5em;
+    margin: 1em 1em;
+    width: 7em;
   }
 
   &__about-wrapper{
     display: flex;
-    padding: 1em;
-
+    justify-content: space-between;
+    margin: 0 -1em;
   }
 
+
   &__about{
-    margin: 1em;
+
   }
 }

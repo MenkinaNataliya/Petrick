@@ -3,8 +3,10 @@
   max-width: em(940px);
   margin: auto;
   box-sizing: border-box;
+  width:100%;
+
   &_small{
-    max-width: 55em;
+    max-width: 50em;
   }
 
   &_first {
