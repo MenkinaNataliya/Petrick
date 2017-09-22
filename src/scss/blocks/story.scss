@@ -17,8 +17,10 @@
 
   &__content{
     &_text{
-      padding: 0 15em;
+
       text-align: left;
+      max-width: 50%;
+      margin: auto;
     }
 
 

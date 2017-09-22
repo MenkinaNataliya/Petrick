@@ -299,8 +299,9 @@ a.btn {
     right: 0;
     top: 5em; }
   .story__content_text {
-    padding: 0 15em;
-    text-align: left; }
+    text-align: left;
+    max-width: 50%;
+    margin: auto; }
   .story__type {
     font-weight: 900; }
   .story__title {
@@ -311,7 +312,9 @@ a.btn {
     margin: 2em 0; }
 
 .story-content {
-  vertical-align: middle; }
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between; }
   .story-content__image {
     min-height: 10em;
     vertical-align: middle;
@@ -319,17 +322,19 @@ a.btn {
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    display: inline-block; }
+    padding: 1em;
+    width: 100%; }
     .story__content_text-image .story-content__image {
-      width: 49.5%; }
+      max-width: 50%; }
   .story-content__text {
     vertical-align: middle;
     display: inline-block;
     text-align: left;
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    width: 100%;
+    padding: 1em; }
     .story__content_text-image .story-content__text {
-      width: 46.5%;
-      margin-left: 2em; }
+      max-width: 50%; }
 
 .story-banner {
   margin: 1em auto; }

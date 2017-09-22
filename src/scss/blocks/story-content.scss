@@ -1,5 +1,10 @@
 .story-content{
   vertical-align: middle;
+
+  display: flex;
+  justify-content: space-between;
+
+
   &__image{
     min-height: 10em;
     vertical-align: middle;
@@ -7,11 +12,12 @@
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    display: inline-block;
+    padding: 1em;
+    width: 100%;
 
 
     @include ifparent('.story__content_text-image'){
-      width:49.5%;
+      max-width:50%;
     }
 
   }
@@ -21,10 +27,10 @@
     display: inline-block;
     text-align: left;
     font-size: 0.9em;
+    width: 100%;
+    padding: 1em;
     @include ifparent('.story__content_text-image'){
-      width: 46.5%;
-      margin-left: 2em;
-
+      max-width: 50%;
     }
   }
 }
