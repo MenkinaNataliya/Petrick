@@ -1,14 +1,22 @@
 .author{
-  margin: 1em 0;
+
   display: flex;
   justify-content: center;
 
-  &__post{
+  &__post , &__name{
+    width: 100%;
+    max-width: 50%;
+    margin: 0.5em;
+  }
+
+  &__post {
     font-weight: bold;
     text-align: right;
+
   }
 
   &__name{
     text-align: left;
+
   }
 }

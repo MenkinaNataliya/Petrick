@@ -102,9 +102,12 @@ a.btn {
     font-weight: 900; }
 
 .author {
-  margin: 1em 0;
   display: flex;
   justify-content: center; }
+  .author__post, .author__name {
+    width: 100%;
+    max-width: 50%;
+    margin: 0.5em; }
   .author__post {
     font-weight: bold;
     text-align: right; }
@@ -279,9 +282,13 @@ a.btn {
   display: flex;
   justify-content: space-between;
   margin: 2em 0; }
+  .social-nav_center {
+    justify-content: center;
+    margin: 0; }
   .social-nav__item {
     font-size: 0.8em;
-    font-weight: 900; }
+    font-weight: 900;
+    margin: 0.5em; }
     .social-nav__item_blue {
       color: blue; }
     .social-nav__item_aqua {
