@@ -462,6 +462,32 @@ app.utils.isValidPhone = function(phone){
 };
 var app = app || {};
 
+app.PopUp = function() {
+    this.initialize();
+};
+
+app.PopUp.prototype = {
+    initialize: function() {
+        this.$items = $('.stories__announce');
+        this.$popup = $('.popup')
+        this.$close = $('.popup__close');
+
+
+        this.$items.click(_.bind(this.storyClick, this))
+        this.$close.click(_.bind(this.closeClick, this))
+    },
+
+
+    storyClick: function(){
+        this.$popup.addClass("popup_isActive");
+    },
+
+    closeClick: function(){
+        this.$popup.removeClass("popup_isActive");
+    }
+};
+var app = app || {};
+
 app.SwitchButton = function() {
     this.initialize();
 };
@@ -496,9 +522,9 @@ app.SwitchButton.prototype = {
     });
 
     var $announce=$('.stories__announce');
-    /*$announce.click(function(){
-        window.location="project.html"
-    })*/
+
+    new app.PopUp();
+
 
 
 })();

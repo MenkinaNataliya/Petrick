@@ -85,6 +85,18 @@ module.exports = function (grunt) {
                     'www/assets/svg/sprite.svg': 'src/svg/sprite.svg'
                 }
             }
+        },
+        inlinecss: {
+            main: {
+                options: {
+                    webResources: {
+                        images: false
+                    }
+                },
+                files: {
+                    'www/mail/tmp/three_days.html': 'www/mail/three_days.html'
+                }
+            }
         }
     });
 

@@ -22,9 +22,9 @@
     });
 
     var $announce=$('.stories__announce');
-    /*$announce.click(function(){
-        window.location="project.html"
-    })*/
+
+    new app.PopUp();
+
 
 
 })();
