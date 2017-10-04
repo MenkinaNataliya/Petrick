@@ -15,8 +15,12 @@
     background: url(img/logo.png) transparent center 0.1em no-repeat;
 }
 
+.logo-footer{
+    background: url(img/crown.png) transparent center 0.1em no-repeat;
+}
+
 .text {
-    height: 10em;
+    height: auto;
     color:#ffffff;
     font-size: 14px;
     font-family: "TriviaSansBook";
@@ -24,12 +28,19 @@
     text-align: left;
 }
 
+.text-center{
+    text-align: center !important;
+    margin-bottom: 1em !important;
+}
+
 .text >td.title{
     text-align: center;
 }
 
 .text >td{
-    padding: 0 6.5em;
+    display: block;
+    max-width: 25em;
+    margin: 0 auto;
     text-align: left;
 }
 
@@ -57,11 +68,50 @@
 }
 
 .social{
+    height: 3em;
     white-space: nowrap;
 }
 
-.items{
+.social > td{
+    display: flex;
+    justify-content: space-between;
+    max-width: 20em;
+    margin: 0 auto;
+}
 
+.items{
+    width: 30px;
+    height: 30px;
+}
+
+.fb{
+    background: url(img/fb.png) center no-repeat;
+    background-size: contain;
+}
+.vk{
+    background: url(img/vk.png) center no-repeat;
+    background-size: contain;
+}
+.tw{
+    background: url(img/tw.png) center no-repeat;
+    background-size: contain;
+}
+.yt{
+    background: url(img/yt.png) center no-repeat;
+    background-size: contain;
+}
+.inst{
+    background: url(img/inst.png) center no-repeat;
+    background-size: contain;
+}
+.owl{
+    background: url(img/owl.png) center no-repeat;
+    background-size: contain;
+}
+
+a{
+    color: #af966d;
+    text-decoration: none;
 }
 
 body{
