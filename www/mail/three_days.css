@@ -11,7 +11,11 @@ table{
     background: #000000;
 }
 
-img, a{
+img{
+    display: block;
+}
+
+a.social{
     display: block;
 }
 
