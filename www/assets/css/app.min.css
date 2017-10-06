@@ -87,27 +87,25 @@ a.btn {
 
 .header {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 5em; }
+  min-height: 5em;
+  width: 100%; }
   .header__logo {
-    position: absolute;
-    left: 25.5em;
     cursor: pointer;
     display: inline-block;
+    float: left;
     font-size: 1.2em;
     font-weight: 900;
     width: -webkit-max-content;
     width: -moz-max-content;
-    width: max-content; }
+    width: max-content;
+    margin-top: 1em; }
   .header__switch-button {
     cursor: pointer;
-    position: absolute;
-    right: -74em;
     display: inline-block;
+    float: right;
     font-size: 1.2em;
-    font-weight: 900; }
+    font-weight: 900;
+    margin-top: 1em; }
 
 .author {
   display: -webkit-box;
@@ -144,7 +142,9 @@ a.btn {
   max-width: 58.75em;
   margin: auto;
   box-sizing: border-box;
-  width: 100%; }
+  width: 100%;
+  left: 0;
+  right: 0; }
   .container_small {
     max-width: 50em; }
   .container_first {
@@ -240,16 +240,15 @@ a.btn {
   position: relative;
   width: auto;
   height: 100%; }
-  .story-announce__type {
+  .story-announce__text {
     position: absolute;
-    margin: 0 1em;
-    margin-top: 1em;
+    margin: 1em;
+    line-height: 1.8; }
+  .story-announce__type {
     font-size: 0.8em;
     font-weight: 800; }
   .story-announce__title {
-    font-size: 0.8em;
-    position: absolute;
-    margin: 2.5em 1em; }
+    font-size: 0.8em; }
   .story-announce__black-effect {
     opacity: 0.3;
     background-color: #000000;
@@ -265,7 +264,7 @@ a.btn {
     margin-top: 0.7em;
     margin-bottom: 1em;
     float: left;
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-weight: 900; }
   .footer__copyright {
     cursor: pointer;
@@ -273,7 +272,7 @@ a.btn {
     margin-top: 0.7em;
     margin-bottom: 1em;
     float: right;
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-weight: 900; }
 
 .employee {

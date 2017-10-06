@@ -11,7 +11,9 @@ table{
     background: #000000;
 }
 
-
+img, a{
+    display: block;
+}
 
 .text {
     text-align: left;
