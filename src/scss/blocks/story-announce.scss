@@ -10,9 +10,10 @@
   height: 100%;
 
   &__text{
-    position: absolute;
-    margin: 1em;
+    position: relative;
+    padding: 1em;
     line-height: 1.8;
+    z-index:10;
   }
 
 

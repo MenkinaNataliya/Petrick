@@ -176,12 +176,10 @@ a.btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 1em;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .info__employee {
-    margin: 1em 1em;
     width: 7em; }
   .info__about-wrapper {
     display: -webkit-box;
@@ -241,9 +239,10 @@ a.btn {
   width: auto;
   height: 100%; }
   .story-announce__text {
-    position: absolute;
-    margin: 1em;
-    line-height: 1.8; }
+    position: relative;
+    padding: 1em;
+    line-height: 1.8;
+    z-index: 10; }
   .story-announce__type {
     font-size: 0.8em;
     font-weight: 800; }
@@ -309,22 +308,18 @@ a.btn {
     font-weight: bold; }
 
 .social-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 2em 0;
+  text-align: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 2em 0; }
-  .social-nav_center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .social-nav__item {
     font-size: 0.8em;
     font-weight: 900;
-    margin: 0.5em; }
+    display: inline-block; }
     .social-nav__item_blue {
       color: blue; }
     .social-nav__item_aqua {
@@ -353,8 +348,6 @@ a.btn {
     font-weight: bold;
     font-size: 1.5em;
     margin: 1.2em; }
-  .story__authors {
-    margin: 2em 0; }
 
 .story-content {
   vertical-align: middle;
@@ -434,3 +427,7 @@ a.btn {
     text-align: right; }
     .popup__close:before {
       content: "✕"; }
+
+.authors {
+  text-align: center;
+  margin: 1em 0; }

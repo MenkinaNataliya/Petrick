@@ -1,17 +1,16 @@
 .social-nav{
-  display: flex;
-  justify-content: space-between;
-  margin: 2em 0;
 
-  &_center{
-    justify-content: center;
-    margin: 0;
-  }
+  margin: 2em 0;
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
 
   &__item{
     font-size: 0.8em;
     font-weight: 900;
-    margin: 0.5em;
+
+    display: inline-block;
+
     &_blue{
       color: blue;
     }
