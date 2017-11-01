@@ -35,10 +35,6 @@ body {
   position: relative;
 }
 
-::selection {
-  background: $brand-color;
-}
-
 .is_no-transition {
   transition: none !important;
 }
@@ -54,3 +50,8 @@ a.btn{
   position: absolute;
   font-weight: 900;
 }
+a{
+  text-decoration: none;
+}
+
+
