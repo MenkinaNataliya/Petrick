@@ -1,0 +1,31 @@
+
+.slot{
+  transition: transform .1s;
+
+  &_transform{
+
+    transform: scaleY(-1);
+  }
+
+  &__image {
+    //background-image: url(../images/avtomat/seven.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+
+
+    &_seven{
+      background-image: url(../images/avtomat/seven.png);
+    }
+
+    &_apple{
+      background-image: url(../images/avtomat/Apple.png);
+    }
+
+    &_bell{
+      background-image: url(../images/avtomat/Bell.png);
+    }
+  }
+}

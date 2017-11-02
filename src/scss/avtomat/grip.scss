@@ -1,0 +1,10 @@
+.grip{
+  width: em(15px);
+  height: em(70px);
+  background: #c78037;
+  border-radius: 3%;
+
+  &__base{}
+  &__kernel{}
+  &__ball{}
+}
