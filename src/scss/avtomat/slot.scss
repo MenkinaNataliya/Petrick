@@ -1,7 +1,23 @@
 
 .slot{
 
+  .active{
+    transform: translateY(0);
+    opacity: 1 ;
+  }
 
+  .transform{
+    transform: translateY(100%);
+  }
+
+  .next{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  .hide{
+    opacity: 0 !important;
+  }
 
 
   &__image {
@@ -12,7 +28,9 @@
     background-position: center;
     width: 100%;
     height: 100%;
-
+    position: absolute;
+    opacity: 0;
+    transform: translateY(100%);
 
     &_seven{
       background-image: url(../images/avtomat/seven.png);
@@ -28,27 +46,6 @@
 
   }
 
-  .active{
-    position: absolute;
-    opacity: 1;
-  }
 
-  .next{
-    position: absolute;
-    //bottom: 100%;
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  .last{
-    position: absolute;
-    //top: 100%;
-    opacity: 0;
-    transform:translateY(100%);
-  }
 }
 
-.slot__image.transform{
-
-  transform: translateY(100%);
-}

@@ -499,10 +499,7 @@ app.SlotAvtomat.prototype = {
         this.$grip = $("div.avtomat__grip");
         this.$bulbs = $("div.bulb");
         this.$message = $("div.message");
-        //this.$slots = $(".avtomat__slot");
         this.isBlinking = false;
-
-        //this.images = ["apple", "bell", "seven"];
 
         this.solotsController = new app.SlotsController();
 
@@ -518,12 +515,12 @@ app.SlotAvtomat.prototype = {
         this.blinkingLights();
         this.solotsController.runSlots();
 
-        var that =this;
+       /* var that =this;
         setTimeout(function(){
             that.isBlinking = false;
-            that.solotsController.stopSlots();
-            that.checkResult();
-        }, 15000)
+            //that.solotsController.stopSlots();
+           // that.checkResult();
+        }, 15000)*/
 
     },
 
@@ -546,11 +543,19 @@ app.SlotAvtomat.prototype = {
 
         while(isWin===-1){
             var that = this;
-            setInterval(function () {
+            setTimeout(function () {
                 isWin =  that.solotsController.isWin();
-            });
+            },200);
         }
 
+        if(isWin){
+            this.$message.html("");
+            this.$message.append('<img src="assets/images/avtomat/win.png">' )
+        }
+    },
+
+    result: function(isWin){
+        this.isBlinking = false;
         if(isWin){
             this.$message.html("");
             this.$message.append('<img src="assets/images/avtomat/win.png">' )
@@ -568,7 +573,7 @@ app.SlotsController.prototype = {
     initialize: function() {
         this.slotArray=[];
         this.$slots = $(".avtomat__slot");
-        this.images = ["apple", "bell", "seven"];
+        this.images = ["apple", "bell", "seven", "bell","apple"];
         this.isRun = false;
 
         this.initSlots();
@@ -595,11 +600,12 @@ app.SlotsController.prototype = {
                 $active: $(slot).find(":nth-child(2)"),
                 $last: $(slot).find(':last-child'),
                 type: '',
-                run: false
+                run: false,
+                arrayTimeout: 0
             };
 
             slotItem.$active.addClass("active");
-            slotItem.$last.addClass("last");
+            //slotItem.$last.addClass("last");
             slotItem.$next.addClass("next");
 
             this.slotArray.push(slotItem);
@@ -608,7 +614,7 @@ app.SlotsController.prototype = {
     },
 
     runSlots: function(){
-        this.isRun=true;
+        //this.isRun=true;
        // this.playSlots()
         var that =this;
         _.each(that.slotArray, function(slot){
@@ -618,15 +624,21 @@ app.SlotsController.prototype = {
                 slot.run= false;
             }, that.randomtime(true))
         });
+        this.checkStop();
+
+
     },
 
     playSlots: function(slot){
 
         if(slot.run){
             var that = this;
+
             setTimeout(function(){
                 that.slotSlick(slot)
             },that.randomtime());
+
+            slot.arrayTimeout++;
 
             setTimeout(function(){
                 that.playSlots(slot)
@@ -635,73 +647,42 @@ app.SlotsController.prototype = {
 
     },
 
-   /* playSlots: function(slot, time){
-
-        if(this.isRun){
-            var that = this;
-            _.each(that.slotArray, function(slot){
-                setTimeout(function(){
-                    that.slotSlick(slot)
-                },that.randomtime() )
-            });
-
-            setTimeout(function(){
-                that.playSlots()
-            },500)
-        }else{
-            _.each(this.slotArray, function(slot){
-                this.checkClass(slot)
-            }, this);
-        }
-    },*/
-
-
-/*    slotSlick: function(elem){
-        elem.$active.addClass("transform");
-        elem.$active.removeClassDelayed('active', 200);
-        elem.$active.removeClassDelayed('transform', 200);
-
-        elem.$next.removeClassDelayed('next', 50);
-
-        //elem.$last.removeClassDelayed('last', 200);
-
-        var last =  elem.$last.clone();
-        $(last).removeClass('last');
-        elem.$slot.prepend(last);
-        elem.$slot.find(':last-child').remove();
-
-        var that = this;
-
-    },*/
 
     slotSlick: function(elem){
         elem.$active.addClass("transform");
+        elem.$active.removeClassDelayed("transform",100);
+        elem.$active.removeClassDelayed("active",100);
+
         elem.$next.removeClass("next");
+        elem.$next.addClass("active");
 
-        var last =  elem.$last.clone();
-        $(last).removeClass('last');
-        $(last).addClass('next');
-        elem.$slot.prepend(last);
-        elem.$slot.find(':last-child').remove();
+        elem.$last.prependTo(elem.$slot);
 
-        var that = this;
         setTimeout(function(){
-            that.overridingSlotElements(elem);
-        }, 200)
+            elem.$next = elem.$slot.find(':first-child');
+            elem.$active = elem.$slot.find(":nth-child(2)");
+            elem.$last = elem.$slot.find(':last-child');
+            elem.$next.addClass("next")
+        }, 250 )
 
-
+        elem.arrayTimeout--;
 
     },
 
-    stopSlots: function(){
-        this.isRun = false;
-        _.each(this.slotArray, function(slot){
-            this.checkClass(slot)
-        }, this);
+    checkStop: function(){
+        console.log(this.slotArray[0].type === this.slotArray[1].type === this.slotArray[2].type)
+        if(this.slotArray[0].arrayTimeout === 0 && this.slotArray[1].arrayTimeout === 0 &&this.slotArray[2].arrayTimeout === 0){
+            app.slotAvtomat.result(this.slotArray[0].type === this.slotArray[1].type === this.slotArray[2].type);
+        }else{
+            var that = this;
+            setTimeout(function(){
+                that.checkStop()
+            }, 500)
+        }
     },
 
     randomtime: function(flag) {
-        var min = 100, max = 1000;
+        var min = 100, max = 500;
         if (flag === true)  min = 1000; max = 15000;
 
         var rand = min - 0.5 + Math.random() * (max - min + 1);
@@ -710,33 +691,20 @@ app.SlotsController.prototype = {
     },
 
     overridingSlotElements: function(elem){
+
         this.checkClass(elem);
-        
+
         elem.$next =  elem.$slot.find(':first-child');
         elem.$active =  elem.$slot.find(":nth-child(2)");
         elem.$last =  elem.$slot.find(':last-child');
+        elem.$last.removeClass("active");
 
         elem.$active.addClass("active");
-        elem.$last.addClass("last");
+
         elem.$next.addClass("next");
 
         elem.type =  elem.$active.data('type');
 
-        //this.checkClass(elem);
-    },
-
-    checkClass: function(slot){
-        slot.$last.removeClass('transform');
-        slot.$last.removeClass('active');
-        slot.$last.removeClass('prev');
-
-        slot.$next.removeClass('transform');
-        slot.$next.removeClass('active');
-        slot.$next.removeClass('last');
-
-        slot.$active.removeClass('transform');
-        slot.$active.removeClass('next');
-        slot.$active.removeClass('last');
     },
 
     addElementInSlot: function ($slot) {
@@ -749,6 +717,7 @@ app.SlotsController.prototype = {
     },
 
     isWin: function(){
+
         if(_.filter(this.slotArray, {run: false}).length===3){
             var typeImage = this.slotArray[0].type;
             var isWin=1;
@@ -803,7 +772,7 @@ app.SwitchButton.prototype = {
 
     var $announce=$('.stories__announce');
 
-    new app.SlotAvtomat();
+    app.slotAvtomat = new app.SlotAvtomat();
 
 })();
 

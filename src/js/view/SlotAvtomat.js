@@ -11,10 +11,7 @@ app.SlotAvtomat.prototype = {
         this.$grip = $("div.avtomat__grip");
         this.$bulbs = $("div.bulb");
         this.$message = $("div.message");
-        //this.$slots = $(".avtomat__slot");
         this.isBlinking = false;
-
-        //this.images = ["apple", "bell", "seven"];
 
         this.solotsController = new app.SlotsController();
 
@@ -30,12 +27,12 @@ app.SlotAvtomat.prototype = {
         this.blinkingLights();
         this.solotsController.runSlots();
 
-        var that =this;
+       /* var that =this;
         setTimeout(function(){
             that.isBlinking = false;
-            that.solotsController.stopSlots();
-            that.checkResult();
-        }, 15000)
+            //that.solotsController.stopSlots();
+           // that.checkResult();
+        }, 15000)*/
 
     },
 
@@ -58,11 +55,19 @@ app.SlotAvtomat.prototype = {
 
         while(isWin===-1){
             var that = this;
-            setInterval(function () {
+            setTimeout(function () {
                 isWin =  that.solotsController.isWin();
-            });
+            },200);
         }
 
+        if(isWin){
+            this.$message.html("");
+            this.$message.append('<img src="assets/images/avtomat/win.png">' )
+        }
+    },
+
+    result: function(isWin){
+        this.isBlinking = false;
         if(isWin){
             this.$message.html("");
             this.$message.append('<img src="assets/images/avtomat/win.png">' )

@@ -23,6 +23,6 @@
 
     var $announce=$('.stories__announce');
 
-    new app.SlotAvtomat();
+    app.slotAvtomat = new app.SlotAvtomat();
 
 })();
