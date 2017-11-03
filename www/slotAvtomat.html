@@ -31,9 +31,9 @@
                     <div class="message">Сегодя Ваш день!</div>
                 </div>
                 <div class="avtomat__slots">
-                    <div class="avtomat__slot slot" data-type="seven"><div class="slot__image slot__image_seven"></div></div><!--
-                    --><div class="avtomat__slot slot" data-type="seven"><div class="slot__image slot__image_bell"></div></div><!--
-                    --><div class="avtomat__slot slot" data-type="seven"><div class="slot__image slot__image_apple"></div></div>
+                    <div class="avtomat__slot slot" data-type="seven"></div><!--
+                    --><div class="avtomat__slot slot" data-type="bell"></div><!--
+                    --><div class="avtomat__slot slot" data-type="apple"></div>
                 </div>
                 <div class="avtomat__grip grip">
                     <div class="grip__base"></div>
@@ -46,6 +46,11 @@
         </div>
 
     </div>
+
+    <script type="text/template" id="image-slot-template">
+        <div class="slot__image slot__image_<%=imageName%>" data-type="<%=imageName%>"></div>
+    </script>
+
 <script src="assets/js/libs.min.js"></script>
 <script src="assets/js/app.min.js"></script>
 </body>
